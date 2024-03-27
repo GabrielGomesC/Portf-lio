@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho-container">
+            <ul class="listas">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container-principal">
+        <div class="conteudo-container">
+            <div class="titulo-container">
+                <h1>Emoção em HD</h1>
+
+            </div>
+            <div class="botao-principal">
+                <a href="#produtos">Saiba mais</a>
+            </div>
+        </div>
+    </main>
+
+    <section id="produtos">
+        <div class="produtos-container">
+            <div class="imagem-container">
+                <img src="./imagens/1.jpg" alt="img1" title="Sala com tv">
+                <p>&#40Sala com tv&#41</p>
+            </div>
+            <div class="imagem-container">
+                <img src="./imagens/2.jpg" alt="img2" title="Peaky blinders">
+                <p>&#40Peaky blinders&#41</p>
+            </div>
+            <div class="imagem-container">
+                <img src="./imagens/3.jpg" alt="img3" title="Game of thrones">
+                <p>&#40Game of thrones&#41</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="formulario">
+        <form id="meuFormulario" class="formulario-container">
+            <label for="username">Email:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Senha:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="resultado"></div>
+    </section>
+
+    <script>
+
+        const formulario = document.getElementById('meuFormulario');
+
+
+        formulario.addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+
+            console.log('Email:', username);
+            console.log('Senha:', password);
+
+
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = `Email: ${username}<br>Senha: ${password}`;
+        });
+    </script>
+
+</body>
+
+</html>
